@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luckyland — Casino & Arcade ♣️ 🎰 🎲</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">◆</span>
+      <h1>Luckyland 🍀</h1>
+    </div>
+    <p class="tagline">un solo saldo, todas las mesas</p>
+    <div class="conn-status" id="connStatus">
+      <span class="dot" id="connDot"></span>
+      <span id="connText">conectando con el backend…</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== JUGADORES ===== -->
+    <section class="panel" id="panel-jugadores">
+      <div class="panel-head">
+        <span class="panel-eyebrow">01 — plantilla</span>
+        <h2>Jugadores</h2>
+      </div>
+
+      <form id="formJugador" class="inline-form">
+        <input type="text" id="inputNombre" placeholder="Nombre del jugador" required />
+        <input type="number" id="inputFichas" placeholder="Fichas iniciales" min="0" value="100" />
+        <button type="submit">Registrar jugador</button>
+      </form>
+
+      <div class="chip-grid" id="jugadoresGrid">
+        <p class="empty-state">Cargando jugadores…</p>
+      </div>
+    </section>
+
+    <!-- ===== ACTIVIDADES ===== -->
+    <section class="panel" id="panel-actividades">
+      <div class="panel-head">
+        <span class="panel-eyebrow">02 — piso de juego</span>
+        <h2>Mesas &amp; máquinas</h2>
+      </div>
+      <div class="activity-row" id="actividadesRow">
+        <p class="empty-state">Cargando actividades…</p>
+      </div>
+    </section>
+
+    <!-- ===== HISTORIAL ===== -->
+    <section class="panel" id="panel-historial">
+      <div class="panel-head">
+        <span class="panel-eyebrow">03 — bitácora</span>
+        <h2>Historial de partidas</h2>
+      </div>
+      <div class="table-wrap">
+        <table id="tablaHistorial">
+          <thead>
+            <tr>
+              <th>Jugador</th>
+              <th>Actividad</th>
+              <th>Resultado</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="4" class="empty-state">Cargando historial…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== LEADERBOARD ===== -->
+    <section class="panel panel-accent" id="panel-leaderboard">
+      <div class="panel-head">
+        <span class="panel-eyebrow">04 — salón de la fama</span>
+        <h2>Leaderboard</h2>
+      </div>
+      <ol class="leaderboard" id="leaderboardList">
+        <li class="empty-state">Cargando leaderboard…</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Proyecto Final · Bases de Datos Avanzadas · MongoDB + NestJS</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
